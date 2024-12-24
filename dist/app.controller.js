@@ -15,6 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppController = void 0;
 const common_1 = require("@nestjs/common");
 const app_service_1 = require("./app.service");
+const app_req_dto_1 = require("./app.req.dto");
 let AppController = class AppController {
     constructor(appService) {
         this.appService = appService;
@@ -29,7 +30,7 @@ __decorate([
     (0, common_1.Post)(),
     __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
+    __metadata("design:paramtypes", [app_req_dto_1.GenerateScriptDto]),
     __metadata("design:returntype", Promise)
 ], AppController.prototype, "index", null);
 exports.AppController = AppController = __decorate([

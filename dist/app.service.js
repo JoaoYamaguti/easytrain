@@ -46,17 +46,12 @@ let AppService = class AppService {
             })
         })).json();
         let data = response.candidates[0].content.parts[0].text;
-        console.log(typeof data);
         data = data.replace('```json', '');
         data = data.replace('```', '');
-        console.log(typeof data);
-        console.log(data);
         if (typeof data === 'string') {
             data = JSON.parse(data);
         }
-        const training = data;
-        console.log(training);
-        return training;
+        return data;
     }
 };
 exports.AppService = AppService;
